@@ -1,0 +1,217 @@
+@media all and (max-width: 1600px) {
+  #section01 .hashTag {
+    top: 22%;
+    left: 24%;
+  }
+  #section03 {
+    padding: 50px 0;
+  }
+  #section03 .about {
+    position: absolute;
+    top: 0;
+    transform: translate(0) rotate(-12deg);
+    margin-top: 5%;
+  }
+  #section03 .txtBox {
+    position: static;
+    top: 0;
+    transform: translate(0);
+    margin-top: 30%;
+    padding: 30px 40px;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .background.last {
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 530px;
+    z-index: 2;
+  }
+  #section01 .title {
+    font-size: 4.8vw;
+  }
+  #section04 .portfolioList > li {
+    padding-top: 6.5vw;
+  }
+  #footer {
+    width: 439px;
+    height: 650px;
+    background: url("../images/footer/ipad.png") no-repeat center;
+    background-size: 439px 650px;
+  }
+  #footer .contact {
+    left: 40px;
+  }
+  #footer .contact dt {
+    margin-bottom: 70px;
+  }
+  #footer .contact dt img {
+    width: 200px;
+  }
+  #footer .contact dd.main {
+    top: 29%;
+    right: -25px;
+  }
+  #footer .contact dd.main span {
+    left: 60px;
+  }
+  #footer .contact dd.copy {
+    word-break: keep-all;
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  #logo {
+    bottom: 15%;
+    left: 5%;
+  }
+  #logo img {
+    width: 40vw;
+  }
+  #section01 .sub {
+    bottom: 15%;
+    left: 25%;
+  }
+  #section02 article .txtBox {
+    font-size: 1.8rem;
+  }
+  #section03 .about img {
+    width: 43vw;
+  }
+  #section04 .portfolioList > li {
+    padding-left: 2vw;
+  }
+  #section04 .portfolioList > li .infoBox dt {
+    font-size: 5vw;
+  }
+  #section04 .portfolioList > li .infoBox dd {
+    font-size: 2.5vw;
+  }
+}
+
+@media all and (max-width: 700px) {
+  #logo {
+    bottom: 30%;
+  }
+  #section01 > p {
+    top: 30%;
+    font-size: 1.8rem;
+  }
+  #section01 .sub {
+    bottom: 30%;
+  }
+  #section01 .hashTag {
+    top: 35%;
+    font-size: 1.4rem;
+  }
+  #section02 article {
+    justify-content: space-between;
+  }
+  #section02 article.design .txtBox {
+    padding-top: 20px;
+  }
+  #section02 article .iconBox {
+    width: 100%;
+    padding-left: 0;
+  }
+  #section02 article .txtBox {
+    padding: 20px 20px 0 20px;
+  }
+  #section03 .about img {
+    width: 65vw;
+  }
+  #section03 .txtBox {
+    font-size: 1.8rem;
+  }
+  #section04 .portfolioList > li {
+    padding-top: 20vw;
+  }
+  #section04 .portfolioList > li .viewBtns li a {
+    padding: 2vw 3vw;
+    font-size: 3vw;
+  }
+}
+
+@media all and (max-width: 599px) {
+  .background.last {
+    top: 49.4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 159.5px;
+    height: 345px;
+  }
+  #section02 article .iconBox li {
+    margin: 5px 0;
+  }
+  #footer {
+    width: 250px;
+    height: 370px;
+    background: url("../images/footer/iphone.png") no-repeat center;
+    background-size: 250px 370px;
+  }
+  #footer .contact {
+    left: 55px;
+    font-size: 1.2rem;
+  }
+  #footer .contact dt img {
+    width: 120px;
+  }
+  #footer .contact dd.main {
+    top: 32%;
+    right: 20px;
+  }
+  #footer .contact dd.main span {
+    left: 40px;
+  }
+  #footer .contact dd.copy {
+    font-size: 1rem;
+  }
+  #footer .contact dd.copy br {
+    display: block;
+  }
+}
+
+@media all and (max-width: 499px) {
+  .background.last {
+    top: 49%;
+    left: 50.5%;
+    width: 158.5px;
+  }
+  #scroll {
+    font-size: 1rem;
+  }
+  #section01 > p {
+    top: 34%;
+    font-size: 1rem;
+  }
+  #section01 .hashTag {
+    font-size: 1rem;
+  }
+  #section02 article {
+    justify-content: space-around;
+  }
+  #section02 article .txtBox {
+    font-size: 1.2rem;
+  }
+  #section02 article .iconBox li img {
+    width: 30px;
+  }
+  #section03 .about img {
+    width: 250px;
+    border-radius: 10px;
+  }
+  #section03 .txtBox {
+    font-size: 1.4rem;
+  }
+  #section04 .portfolioList > li .viewBtns li:first-child {
+    margin-right: 10px;
+  }
+  #section04 .portfolioList > li .viewBtns li a {
+    padding: 1vw 1.6vw;
+    font-size: 1.8vw;
+  }
+}
