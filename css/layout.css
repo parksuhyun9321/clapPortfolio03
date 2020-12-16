@@ -27,7 +27,8 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 100%;
   z-index: -1;
-  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .background:before {
@@ -42,14 +43,16 @@ body::-webkit-scrollbar {
 .background.last {
   top: 42%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 800px;
   height: 524px;
   z-index: 2;
 }
 
 .background video {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -71,6 +74,7 @@ body::-webkit-scrollbar {
   color: #fff;
   font-size: 1.4rem;
   z-index: 9;
+  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
@@ -110,18 +114,21 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 45%;
   left: 5%;
-  transform: translateY(-50%) scale(1.5);
+  -webkit-transform: translateY(-50%) scale(1.5);
+          transform: translateY(-50%) scale(1.5);
   font-size: 5vw;
   font-family: 'Jua', sans-serif;
   font-weight: 700;
   color: #fff;
   text-align: center;
+  -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
 }
 
 #section01 .title span {
   position: relative;
   display: block;
+  -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
@@ -135,6 +142,7 @@ body::-webkit-scrollbar {
   font-size: 3rem;
   color: #fff;
   opacity: 0;
+  -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
@@ -150,6 +158,7 @@ body::-webkit-scrollbar {
 #section01 .sub p {
   position: relative;
   opacity: 0;
+  -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
@@ -168,28 +177,37 @@ body::-webkit-scrollbar {
   font-size: 2.6rem;
   color: #fff;
   opacity: 0;
+  -webkit-transition: 0.25s ease;
   transition: 0.25s ease;
 }
 
 #section02 {
   position: fixed;
-  display: none;
   top: 50%;
   width: 100%;
   height: 50%;
+  opacity: 0;
+  -webkit-transition: top 0.25s ease-in;
   transition: top 0.25s ease-in;
 }
 
 #section02 article {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   float: left;
   width: 50%;
   height: 100%;
   background-size: 100% 100%;
   color: #fff;
+  -webkit-transition: left 0.25s ease-in;
   transition: left 0.25s ease-in;
 }
 
@@ -222,9 +240,13 @@ body::-webkit-scrollbar {
 
 #section02 article .iconBox {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 320px;
   padding-left: 80px;
 }
@@ -255,11 +277,12 @@ body::-webkit-scrollbar {
 
 #section03 {
   position: fixed;
-  display: none;
   top: 50%;
   width: 100%;
   height: 100%;
   background-color: #f5ecec;
+  opacity: 0;
+  -webkit-transition: 0.25s ease-in;
   transition: 0.25s ease-in;
 }
 
@@ -267,8 +290,10 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) rotate(-12deg);
+  -webkit-transform: translateY(-50%) rotate(-12deg);
+          transform: translateY(-50%) rotate(-12deg);
   display: none;
+  -webkit-transition: left 0.25s ease;
   transition: left 0.25s ease;
   z-index: 1;
 }
@@ -279,13 +304,15 @@ body::-webkit-scrollbar {
   border-radius: 20px;
 }
 
-#section03 .txtBox {
+#section03 .txt {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: none;
   height: auto;
+  line-height: 1.2;
   padding: 30px 80px;
   font-size: 2rem;
   font-weight: 700;
@@ -294,42 +321,49 @@ body::-webkit-scrollbar {
   background-color: #fff;
   border: 2px solid #d9d9d9;
   border-radius: 0 0 20px 0;
+  -webkit-transition: left 0.25s ease-in;
   transition: left 0.25s ease-in;
-}
-
-#section03 .txtBox dl {
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-#section03 .txtBox dl dt {
-  color: #0e6eb8;
-  margin-bottom: 10px;
-}
-
-#section03 .txtBox dl dd {
   word-break: keep-all;
 }
 
-#section03 .txtBox p {
+#section03 .txt span {
+  display: block;
+  margin-bottom: 10px;
   color: #0e6eb8;
+}
+
+#section03 .txt span:nth-child(n+2) {
+  margin: 10px 0;
+}
+
+#section03 .txt strong {
+  display: block;
   line-height: 1.2;
+  margin-top: 30px;
+  color: #0e6eb8;
 }
 
 #section04 {
   position: fixed;
   top: 0;
   left: 0;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   width: 100%;
   height: 100vh;
   background-color: transparent;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
 #section04 .portfolioList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #section04 .portfolioList > li {
@@ -337,7 +371,8 @@ body::-webkit-scrollbar {
   width: 50%;
   height: 50vh;
   padding: 2vw 0 0 6vw;
-  transition: 0.25s ease-in-out;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
 }
 
 #section04 .portfolioList > li:nth-child(1) {
@@ -358,6 +393,7 @@ body::-webkit-scrollbar {
   font-family: 'Do Hyeon', sans-serif;
   color: #fff;
   background: #00b755;
+  background: -webkit-gradient(linear, left top, right top, color-stop(55%, #00b755), color-stop(90%, #0067c0));
   background: linear-gradient(90deg, #00b755 55%, #0067c0 90%);
 }
 
@@ -383,6 +419,8 @@ body::-webkit-scrollbar {
 }
 
 #section04 .portfolioList > li .viewBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
 }
@@ -402,7 +440,8 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: none;
   width: 835px;
   height: 750px;
@@ -418,6 +457,7 @@ body::-webkit-scrollbar {
   left: 60px;
   font-size: 2.6rem;
   opacity: 0;
+  -webkit-transition: 1.5s ease-in-out;
   transition: 1.5s ease-in-out;
 }
 
@@ -433,7 +473,8 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 140px;
   right: 0;
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
 }
 
 #footer .contact dd.main span {
