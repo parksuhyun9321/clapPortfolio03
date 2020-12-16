@@ -1,8 +1,6 @@
-
-
 $(window).on("scroll",function(){
     let st = $(window).scrollTop();
-    console.log(st); 
+    //console.log(st); 
     if(st >= 400){
         $("#section01 > p").css({
             left:"4vw",
@@ -65,7 +63,9 @@ $(window).on("scroll",function(){
     if(st >= 3000){
         $("#section01 .sub").hide(250);
         $("#logo").hide(250);
-        $("#section02").fadeIn(300);
+        $("#section02").css({
+            opacity:1,
+        });
         $("#section02 .coding").css({
             left:0,
             opacity:1,
@@ -77,7 +77,9 @@ $(window).on("scroll",function(){
     } else if(st < 3000){
         $("#section01 .sub").show(250);
         $("#logo").show(250);
-        $("#section02").fadeOut(300);
+        $("#section02").css({
+            opacity:0,
+        });
         $("#section02 .coding").css({
             left:"-400px",
         });
@@ -102,22 +104,29 @@ $(window).on("scroll",function(){
     // #section02 animation
 
     if(st >= 4200){
-        $("#section03").fadeIn(350);
+        $(".skip").hide();
+        $("#section03").css({
+            opacity:1,
+        });
     } else if(st < 4200){
-        $("#section03").fadeOut(350);
+        $(".skip").show();
+        $("#section03").css({
+            opacity:0,
+        });
     }
     if(st >= 4800){
         $("#section03 .about").show(250);
-        $("#section03 .txtBox").show(250);
+        $("#section03 .txt").show(250);
     } else if(st < 4800){
         $("#section03 .about").hide(250);
-        $("#section03 .txtBox").hide(250);
+        $("#section03 .txt").hide(250);
     } 
     if(st >= 5400){
+        $("#section02").hide(250);
         $("#section03").css({
             top:0,
         });
-        $("#section03 .txtBox").css({
+        $("#section03 .txt").css({
              left:"50vw",
         });
         $("#section03 .about").css({
@@ -127,10 +136,11 @@ $(window).on("scroll",function(){
             color:"#000",
         });
     } else if(st < 5400){
+        $("#section02").show(250);
         $("#section03").css({
              top:"50%",
         });
-        $("#section03 .txtBox").css({
+        $("#section03 .txt").css({
             left:"30%",
         });
         $("#section03 .about").css({
@@ -141,15 +151,10 @@ $(window).on("scroll",function(){
         });
     }
 
-    if(st >= 6000){
-        $("#section02").css({opacity:0});
-    } else if(st < 6000){
-        $("#section02").css({opacity:1});
-    }
-
     // #section03 animation
 
     if(st >= 7200){
+        $("#section03").fadeOut(300);
         $("#section04").fadeIn(300);
         $("#section04").css({
             transform:"rotate(0)",
@@ -167,6 +172,7 @@ $(window).on("scroll",function(){
             right:0,
         });
     } else if(st < 7200){
+        $("#section03").fadeIn(300);
         $("#section04").fadeOut(300);
         $("#section04").css({
             transform:"rotate(90deg)",
