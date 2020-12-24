@@ -27,7 +27,7 @@ $(window).on("scroll",function(){
     }
     if(st >= 1600){
         $("#section01 .sub p:nth-child(1)").css({
-            left:"22.6vw",
+            left:"22.7vw",
             opacity:1,
         });
         $("#section01 .sub p:nth-child(2)").css({
@@ -123,6 +123,11 @@ $(window).on("scroll",function(){
     } 
     if(st >= 5400){
         $("#section02").hide(250);
+        $("#cursor").css({
+            borderColor:"#0e6eb8",
+            backgroundColor:"#0e6eb8",
+            color:"#fff"
+        });
         $("#section03").css({
             top:0,
         });
@@ -137,6 +142,9 @@ $(window).on("scroll",function(){
         });
     } else if(st < 5400){
         $("#section02").show(250);
+        $("#cursor").css({
+            borderColor:"#fff",
+        });
         $("#section03").css({
              top:"50%",
         });
@@ -155,6 +163,11 @@ $(window).on("scroll",function(){
 
     if(st >= 7200){
         $("#section03").fadeOut(300);
+        $("#cursor").css({
+            borderColor:"#fff",
+            backgroundColor:"#fff",
+            color:"#000",
+        });
         $("#section04").fadeIn(300);
         $("#section04").css({
             transform:"rotate(0)",
@@ -300,3 +313,59 @@ $("#footer > .moveBtns .up").on("click",function(){
 });
 
 // 클릭시 한칸씩 내려가고 올라가는 버튼
+
+$(window).on("mousemove",function(e){
+    $("#cursor").css({
+        top:e.pageY,
+        left:e.pageX,
+    });
+});
+
+$("a").on("mouseenter",function(){
+    $("#cursor").css({
+        opacity:1,
+    });
+});
+
+$("a").on("mouseleave",function(){
+    $("#cursor").css({
+        opacity:0,
+    });
+});
+
+
+$("#section04 .portfolioList > li:nth-child(2) .viewBtns > li").on("mouseenter",function(){
+    $("#cursor").css({
+        borderColor:"#0e6eb8",
+        backgroundColor:"#0e6eb8",
+        color:"#fff",
+    });
+});
+
+$("#section04 .portfolioList > li:nth-child(2) .viewBtns > li").on("mouseleave",function(){
+    $("#cursor").css({
+        borderColor:"#fff",
+        backgroundColor:"#fff",
+        color:"#000",
+    });
+});
+
+// 마우스 커서 이벤트
+
+function mobile(){
+    let deviceUA = navigator.userAgent.toLowerCase();
+
+    if(deviceUA.indexOf("android") > -1){
+        document.querySelector("#cursor").style.display = "none";
+        return "android";
+    }
+
+    if(deviceUA.indexOf("iphone") > -1 || deviceUA.indexOf("ipad") > -1 ||deviceUA.indexOf("ipod") > -1){
+        document.querySelector("#cursor").style.display = "none";
+        return "ios";
+    }
+}
+
+mobile();
+
+// 모바일 접속시 
