@@ -4,20 +4,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
   min-height: 10000px;
   font-family: 'Jua', sans-serif;
   background: #e6e7e9;
-  overflow-x: hidden;
   overflow-y: scroll;
-  scrollbar-width: none;
+  overflow-x: hidden;
   -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+a:hover {
+  cursor: none;
 }
 
 .background {
@@ -59,12 +63,12 @@ body::-webkit-scrollbar {
 
 #logo {
   position: fixed;
-  bottom: 3vw;
-  left: 14vw;
+  bottom: 5vw;
+  left: 2vw;
 }
 
 #logo img {
-  width: 25vw;
+  width: 20vw;
 }
 
 #scroll {
@@ -148,9 +152,9 @@ body::-webkit-scrollbar {
 
 #section01 .sub {
   position: fixed;
-  bottom: 2%;
-  left: 20vw;
-  font-size: 4.3vw;
+  bottom: 5%;
+  left: 2vw;
+  font-size: 3vw;
   font-weight: 700;
   color: #fff;
 }
@@ -490,4 +494,29 @@ body::-webkit-scrollbar {
 
 #footer .contact dd.copy br {
   display: none;
+}
+
+#cursor {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #fff;
+  border-radius: 100px;
+  text-align: center;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  opacity: 0;
+  z-index: 9;
+}
+
+#cursor span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
 }
